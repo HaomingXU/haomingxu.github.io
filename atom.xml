@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Haoming&#39;s Blog</title>
+  
+  
+  <link href="https://haoming.moe/atom.xml" rel="self"/>
+  
+  <link href="https://haoming.moe/"/>
+  <updated>2021-04-28T22:36:17.646Z</updated>
+  <id>https://haoming.moe/</id>
+  
+  <author>
+    <name>HaomingHSU</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://haoming.moe/2021/04/28/hello-world/"/>
+    <id>https://haoming.moe/2021/04/28/hello-world/</id>
+    <published>2021-04-28T04:42:04.974Z</published>
+    <updated>2021-04-28T22:36:17.646Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World!"></a>Hello World!</h2><p>这是第一篇文章</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;Hello-World&quot;&gt;&lt;a href=&quot;#Hello-World&quot; class=&quot;headerlink&quot; title=&quot;Hello World!&quot;&gt;&lt;/a&gt;Hello World!&lt;/h2&gt;&lt;p&gt;这是第一篇文章&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
