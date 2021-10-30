@@ -6,7 +6,7 @@
   <link href="https://haoming.moe/atom.xml" rel="self"/>
   
   <link href="https://haoming.moe/"/>
-  <updated>2021-10-30T05:18:51.578Z</updated>
+  <updated>2021-10-30T05:25:14.299Z</updated>
   <id>https://haoming.moe/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://haoming.moe/2021/10/hg2021.html"/>
     <id>https://haoming.moe/2021/10/hg2021.html</id>
     <published>2021-10-30T05:15:22.000Z</published>
-    <updated>2021-10-30T05:18:51.578Z</updated>
+    <updated>2021-10-30T05:25:14.299Z</updated>
     
     <content type="html"><![CDATA[<h2 id="0x01-序言"><a href="#0x01-序言" class="headerlink" title="0x01 序言"></a>0x01 序言</h2><p>嗯，简单点说，在过去的一周，参与了USTC HG2021，并获得了181/2677成绩。本页内容在于记录解题方法，等。</p><span id="more"></span><h2 id="0x02-题解"><a href="#0x02-题解" class="headerlink" title="0x02 题解"></a>0x02 题解</h2>]]></content>
     
@@ -31,7 +31,7 @@
     
     
     
-    <category term="USTC, CTF" scheme="https://haoming.moe/tags/USTC-CTF/"/>
+    <category term="Daily" scheme="https://haoming.moe/tags/Daily/"/>
     
   </entry>
   
@@ -40,7 +40,7 @@
     <link href="https://haoming.moe/2021/05/maydayfin.html"/>
     <id>https://haoming.moe/2021/05/maydayfin.html</id>
     <published>2021-05-18T11:55:08.000Z</published>
-    <updated>2021-05-28T11:52:47.595Z</updated>
+    <updated>2021-10-30T05:24:55.798Z</updated>
     
     <content type="html"><![CDATA[<h2 id="0x01-序言"><a href="#0x01-序言" class="headerlink" title="0x01 序言"></a>0x01 序言</h2><p>真没有想到五一假期结束两周之后才开题写总结，想想也真是搞笑，哈哈。</p><span id="more"></span><h2 id="0x02-1st-May"><a href="#0x02-1st-May" class="headerlink" title="0x02 1st, May"></a>0x02 1st, May</h2><p>非常标准，却又一点也不标准的(珲春)防川之行。</p><h2 id="0x03-3rd-May"><a href="#0x03-3rd-May" class="headerlink" title="0x03 3rd, May"></a>0x03 3rd, May</h2><p>延吉之行</p>]]></content>
     
@@ -50,6 +50,8 @@
     
     
     
+    <category term="Daily" scheme="https://haoming.moe/tags/Daily/"/>
+    
   </entry>
   
   <entry>
@@ -57,7 +59,7 @@
     <link href="https://haoming.moe/2021/04/maydayplans.html"/>
     <id>https://haoming.moe/2021/04/maydayplans.html</id>
     <published>2021-04-29T22:52:19.000Z</published>
-    <updated>2021-05-18T11:56:26.456Z</updated>
+    <updated>2021-10-30T05:24:59.192Z</updated>
     
     <content type="html"><![CDATA[<h2 id="0x01-关于时间"><a href="#0x01-关于时间" class="headerlink" title="0x01 关于时间"></a>0x01 关于时间</h2><p>理论上我们从今天下午第二节开始就是没课的状态了。所以，五一假期的开始时间应该是2021-04-30 14:45:00(UTC+8)<br>结束时间，理论上应该是2021-05-06 08:40:00(UTC+8)，即英语课上课时间。<br>总结一下<br>2021-04-30 14:45:00(UTC+8) TO 2021-05-06 08:40:00(UTC+8)</p><span id="more"></span><h2 id="0x02-关于旅程"><a href="#0x02-关于旅程" class="headerlink" title="0x02 关于旅程"></a>0x02 关于旅程</h2><p>目前的初步计划可能仅仅只是局限于延边州内，因为…总之就是没人去长春撒(逃</p><h2 id="0x03-关于预算"><a href="#0x03-关于预算" class="headerlink" title="0x03 关于预算"></a>0x03 关于预算</h2><p>为本次五一我准备了差不多500CNY的预算，不多，但也不能算少。</p><h2 id="0x04-其他"><a href="#0x04-其他" class="headerlink" title="0x04 其他"></a>0x04 其他</h2><p>这里没有什么想说的话。</p>]]></content>
     
@@ -66,6 +68,8 @@
     
     
     
+    
+    <category term="Daily" scheme="https://haoming.moe/tags/Daily/"/>
     
   </entry>
   
