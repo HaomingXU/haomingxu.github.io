@@ -6,7 +6,7 @@
   <link href="https://haoming.moe/atom.xml" rel="self"/>
   
   <link href="https://haoming.moe/"/>
-  <updated>2021-05-28T11:52:47.595Z</updated>
+  <updated>2021-10-30T05:16:15.886Z</updated>
   <id>https://haoming.moe/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>参USTC第八届信息安全大赛(Hackergame 2021)记录</title>
+    <link href="https://haoming.moe/2021/05/maydayfin.html"/>
+    <id>https://haoming.moe/2021/05/maydayfin.html</id>
+    <published>2021-10-30T05:15:22.000Z</published>
+    <updated>2021-10-30T05:16:15.886Z</updated>
+    
+    <content type="html"><![CDATA[<p>嗯，简单点说，在过去的一周，参与了USTC HG2021，并获得了181/2677成绩。本页内容在于记录解题方法，等。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;嗯，简单点说，在过去的一周，参与了USTC HG2021，并获得了181/2677成绩。本页内容在于记录解题方法，等。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="USTC, CTF" scheme="https://haoming.moe/tags/USTC-CTF/"/>
+    
+  </entry>
   
   <entry>
     <title>五一假期的总结</title>
