@@ -5,7 +5,7 @@
   --text-color: #555;
   --blockquote-color: #666;
   --link-color: #555;
-  --link-hover-color: #222;
+  --link-hover-color: #0078d4;
   --brand-color: #fff;
   --brand-hover-color: #fff;
   --table-row-odd-bg-color: #f9f9f9;
@@ -271,7 +271,7 @@ kbd {
   border: 1px solid #ccc;
   border-radius: 0.2em;
   box-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.1);
-  color: #555;
+  color: #222;
   font-family: inherit;
   padding: 0.1em 0.3em;
   white-space: nowrap;
@@ -396,7 +396,7 @@ code {
 code {
   background: #eee;
   border-radius: 3px;
-  color: #555;
+  color: #222;
   padding: 2px 4px;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -1169,7 +1169,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff0162;
+  background: #0d1b58;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
