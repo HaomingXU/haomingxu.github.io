@@ -6,7 +6,7 @@
   <link href="https://haoming.moe/atom.xml" rel="self"/>
   
   <link href="https://haoming.moe/"/>
-  <updated>2022-03-31T03:28:13.284Z</updated>
+  <updated>2022-03-31T05:16:52.596Z</updated>
   <id>https://haoming.moe/</id>
   
   <author>
@@ -21,12 +21,14 @@
     <link href="https://haoming.moe/2022/03/onlineclass-thoughts.html"/>
     <id>https://haoming.moe/2022/03/onlineclass-thoughts.html</id>
     <published>2022-03-31T02:42:35.000Z</published>
-    <updated>2022-03-31T03:28:13.284Z</updated>
+    <updated>2022-03-31T05:16:52.596Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="0x01-背景"><a href="#0x01-背景" class="headerlink" title="0x01 背景"></a>0x01 背景</h2><p>全国人都知道，离谱的寄林省在2022年3月1日就疯了。本来计划自28Feb起至4Mar的学校网课就这么一直持续下来，from now to the future.<br>其实仔细想想，倒也没啥，封咯~ 然而，显然，教师水平总是那么让人无法理解。</p><span id="more"></span><h2 id="0x02-赛博Python"><a href="#0x02-赛博Python" class="headerlink" title="0x02 赛博Python"></a>0x02 赛博Python</h2><p>这一切，都要从某个叫做 Fundamentals of Python: Data Structure 的教材说起。<br>这是一本翻译得不怎么太好的书。书的前后翻译水平，充满了英文语境下的中文。<strong>英式中文，不过如此。</strong>我不知道某位教师怎么想的，让一堆学生直接使用集成包。这多少是我无法理解的行为。<br>倒也不是说集成包不好，但对于什么都不懂的学生，为什么初学的时候要怕麻烦，要用集成包？尤其是这可是教授知识的情况。多少无法理解。<br>更无论推荐开源IDE虽好，但自己用着<em>PyCharm</em>，是忘了<em>PyCharm</em>学生免费用的事情了吗？<br>标题提到了Cyber，但好像这也不够赛博。那到底哪里赛博了呢？答案是作业。<br>5, 10, 16, More…… 作业的量一天天在加，作业的含金量却纹丝未动。繁琐无用的<strong>摘抄示例代码</strong>实在无法让我明白这其中的用意。</p><blockquote><p>你说教学学院，一次一次一次反馈多少次了，改过不啦？换汤不换药啊！</p></blockquote><p>每天，班级学习委员都会收到关于此人的Complaint Letter，每周都要给学院反馈，但有用吗？</p><p>I don’t understand what has happened, but I’m astonished.</p><p>Terrible.</p><h2 id="0x03-离谱DB"><a href="#0x03-离谱DB" class="headerlink" title="0x03 离谱DB"></a>0x03 离谱DB</h2><p>要说这位先森的Python叫赛博，那我只能认为DB叫离谱了。<br>有多离谱？<br><code>SELETE * FROM * </code><br>就这么离谱。<br>作业也是多得令人发指：发布于Mar25的作业，我写了<strong>五个小时</strong>；发布于Mar24的作业，我写了<strong>一个半小时</strong>。<br>更不用说要求学生配置的环境本身就<strong>不支持</strong>某些语句的使用，我不知道我要抄些什么代码。<br>所能说的，只有<strong>无语</strong>。</p><h2 id="0xFF-不会梦到PDF毕业证"><a href="#0xFF-不会梦到PDF毕业证" class="headerlink" title="0xFF 不会梦到PDF毕业证"></a>0xFF 不会梦到PDF毕业证</h2><p>与此位教师教学能力成反比的，是他的技术功底。<br>无意冒犯，但我无法理解在<strong>生产环境</strong>中直接使用 root 登录的用意。<br>还有挂科率。<br>据悉，上一级有一个自学Python不错的学长，被Fail了。</p><p>私は知りません，でも：<br>I dare not ask.</p><p>Maybe there will be no Graduate Certificate in PDF format.</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="0x01 背景"><a class="header-anchor" href="#0x01 背景">¶</a> 0x01 背景</h2><p>全国人都知道，离谱的寄林省在2022年3月1日就疯了。本来计划自28Feb起至4Mar的学校网课就这么一直持续下来，from now to the future.<br>其实仔细想想，倒也没啥，封咯~ 然而，显然，教师水平总是那么让人无法理解。</p><span id="more"></span><h2 id="0x02 赛博Python"><a class="header-anchor" href="#0x02 赛博Python">¶</a> 0x02 赛博Python</h2><p>这一切，都要从某个叫做 Fundamentals of Python: Data Structure 的教材说起。<br>这是一本翻译得不怎么太好的书。书的前后翻译水平，充满了英文语境下的中文。<strong>英式中文，不过如此。<strong>我不知道某位教师怎么想的，让一堆学生直接使用集成包。这多少是我无法理解的行为。<br>倒也不是说集成包不好，但对于什么都不懂的学生，为什么初学的时候要怕麻烦，要用集成包？尤其是这可是教授知识的情况。多少无法理解。<br>更无论推荐开源IDE虽好，但自己用着<em>PyCharm</em>，是忘了<em>PyCharm</em>学生免费用的事情了吗？<br>标题提到了Cyber，但好像这也不够赛博。那到底哪里赛博了呢？答案是作业。<br>5, 10, 16, More...... 作业的量一天天在加，作业的含金量却纹丝未动。繁琐无用的</strong>摘抄示例代码</strong>实在无法让我明白这其中的用意。</p><blockquote><p>你说教学学院，一次一次一次反馈多少次了，改过不啦？换汤不换药啊！</p></blockquote><p>每天，班级学习委员都会收到关于此人的Complaint Letter，每周都要给学院反馈，但有用吗？</p><p>I don't understand what has happened, but I'm astonished.</p><p>Terrible.</p><h2 id="0x03 离谱DB"><a class="header-anchor" href="#0x03 离谱DB">¶</a> 0x03 离谱DB</h2><p>要说这位先森的Python叫赛博，那我只能认为DB叫离谱了。<br>有多离谱？<br><code>SELETE * FROM * </code><br>就这么离谱。<br>作业也是多得令人发指：发布于Mar25的作业，我写了<strong>五个小时</strong>；发布于Mar24的作业，我写了<strong>一个半小时</strong>。<br>更不用说要求学生配置的环境本身就<strong>不支持</strong>某些语句的使用，我不知道我要抄些什么代码。<br>所能说的，只有<strong>无语</strong>。</p><h2 id="0xFF 不会梦到PDF毕业证"><a class="header-anchor" href="#0xFF 不会梦到PDF毕业证">¶</a> 0xFF 不会梦到PDF毕业证</h2><p>与此位教师教学能力成反比的，是他的技术功底。<br>无意冒犯，但我无法理解在<strong>生产环境</strong>中直接使用 root 登录的用意。<br>还有挂科率。<br>据悉，上一级有一个自学Python不错的学长，被Fail了。</p><p>私は知りません，でも：<br>I dare not ask.</p><p>Maybe there will be no Graduate Certificate in PDF format.</p><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">]]></content>
     
     
-    <summary type="html">&lt;h2 id=&quot;0x01-背景&quot;&gt;&lt;a href=&quot;#0x01-背景&quot; class=&quot;headerlink&quot; title=&quot;0x01 背景&quot;&gt;&lt;/a&gt;0x01 背景&lt;/h2&gt;&lt;p&gt;全国人都知道，离谱的寄林省在2022年3月1日就疯了。本来计划自28Feb起至4Mar的学校网课就这么一直持续下来，from now to the future.&lt;br&gt;其实仔细想想，倒也没啥，封咯~ 然而，显然，教师水平总是那么让人无法理解。&lt;/p&gt;</summary>
+    <summary type="html">&lt;h2 id=&quot;0x01 背景&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#0x01 背景&quot;&gt;¶&lt;/a&gt; 0x01 背景&lt;/h2&gt;
+&lt;p&gt;全国人都知道，离谱的寄林省在2022年3月1日就疯了。本来计划自28Feb起至4Mar的学校网课就这么一直持续下来，from now to the future.&lt;br&gt;
+其实仔细想想，倒也没啥，封咯~ 然而，显然，教师水平总是那么让人无法理解。&lt;/p&gt;</summary>
     
     
     
