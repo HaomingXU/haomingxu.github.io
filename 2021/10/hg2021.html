@@ -2,27 +2,30 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 6.3.0">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"haoming.moe","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":true,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-  <meta name="description" content="0x01 序言嗯，简单点说，在过去的一周，参与了USTC HG2021，并获得了总排181&#x2F;2677, 最高1&#x2F;134, T3一血的成绩。本页内容在于简要记录解题方法，等。">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"haoming.moe","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.13.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="0x01 序言 嗯，简单点说，在过去的一周，参与了USTC HG2021，并获得了总排181&#x2F;2677, 最高1&#x2F;134, T3一血的成绩。本页内容在于简要记录解题方法，等。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="参USTC第八届信息安全大赛(Hackergame 2021)记录">
 <meta property="og:url" content="https://haoming.moe/2021/10/hg2021.html">
 <meta property="og:site_name" content="Haoming&#39;s Blog">
-<meta property="og:description" content="0x01 序言嗯，简单点说，在过去的一周，参与了USTC HG2021，并获得了总排181&#x2F;2677, 最高1&#x2F;134, T3一血的成绩。本页内容在于简要记录解题方法，等。">
+<meta property="og:description" content="0x01 序言 嗯，简单点说，在过去的一周，参与了USTC HG2021，并获得了总排181&#x2F;2677, 最高1&#x2F;134, T3一血的成绩。本页内容在于简要记录解题方法，等。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://haoming.moe/2021/10/hg2021/rank0.png">
 <meta property="og:image" content="https://haoming.moe/2021/10/hg2021/fb.png">
@@ -33,20 +36,15 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://haoming.moe/2021/10/hg2021/rank0.png">
 
+
 <link rel="canonical" href="https://haoming.moe/2021/10/hg2021">
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
 
-  <title>参USTC第八届信息安全大赛(Hackergame 2021)记录 | Haoming's Blog</title>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://haoming.moe/2021/10/hg2021.html","path":"/2021/10/hg2021.html","title":"参USTC第八届信息安全大赛(Hackergame 2021)记录"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>参USTC第八届信息安全大赛(Hackergame 2021)记录 | Haoming's Blog</title>
   
 
 
@@ -55,51 +53,31 @@
 
 
   <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 <link rel="alternate" href="/atom.xml" title="Haoming's Blog" type="application/atom+xml">
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
+  <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Haoming's Blog</h1>
-      <span class="logo-line-after"><i></i></span>
+      <i class="logo-line"></i>
+      <p class="site-title">Haoming's Blog</p>
+      <i class="logo-line"></i>
     </a>
   </div>
 
@@ -111,29 +89,8 @@
 
 
 
-
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-links">
-
-    <a href="/links/" rel="section"><i class="fa fa-user-friends fa-fw"></i>链接</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-links"><a href="/links/" rel="section"><i class="fa fa-user-friends fa-fw"></i>链接</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-qsl"><a href="/radio/" rel="section"><i class="fa fa-tower-cell fa-fw"></i>QSL</a></li>
   </ul>
 </nav>
 
@@ -141,185 +98,18 @@
 
 
 </div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content post posts-expand">
-            
-
-    
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://haoming.moe/2021/10/hg2021.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="HaomingHSU">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Haoming's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          参USTC第八届信息安全大赛(Hackergame 2021)记录
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-10-30 13:15:22" itemprop="dateCreated datePublished" datetime="2021-10-30T13:15:22+08:00">2021-10-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-11-30 19:46:44" itemprop="dateModified" datetime="2021-11-30T19:46:44+08:00">2021-11-30</time>
-              </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2021/10/hg2021.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/10/hg2021.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-        <h2 id="0x01-序言"><a href="#0x01-序言" class="headerlink" title="0x01 序言"></a>0x01 序言</h2><p>嗯，简单点说，在过去的一周，参与了USTC HG2021，并获得了总排181/2677, 最高1/134, T3一血的成绩。本页内容在于简要记录解题方法，等。</p>
-<img data-src="/2021/10/hg2021/rank0.png" class="" title="最高排名时截图">
-
-<span id="more"></span>
-<h2 id="0x02-题解"><a href="#0x02-题解" class="headerlink" title="0x02 题解"></a>0x02 题解</h2><h3 id="签到"><a href="#签到" class="headerlink" title="签到"></a>签到</h3><p>没什么好说的, 发现使用GET, 获取Unix时间戳, 直接Google即可。</p>
-<h3 id="十六进制"><a href="#十六进制" class="headerlink" title="十六进制"></a>十六进制</h3><p>使用OCR把16进制数字识别出来后转成ASCII, 即可得出。</p>
-<h3 id="追寻自由的电波-本题有一血"><a href="#追寻自由的电波-本题有一血" class="headerlink" title="追寻自由的电波(本题有一血)"></a>追寻自由的电波(本题有一血)</h3><p>打开Premiere, 更改速度/持续时间, 放一遍即可。字母用的是NATO音标, 这是个知识点。</p>
-<img data-src="/2021/10/hg2021/fb.png" class="" title="一血留念|窝法乙烷">
-
-<h3 id="猫咪问答"><a href="#猫咪问答" class="headerlink" title="猫咪问答"></a>猫咪问答</h3><p>基本上直接搜索相关内容即可。</p>
-<p>话说, 那个/dev/null让我懵了好一会…这就是整活吗?</p>
-<h3 id="卖瓜"><a href="#卖瓜" class="headerlink" title="卖瓜"></a>卖瓜</h3><p>多输入几个大数字, 发现在9中输入会溢出, 以此为突破口。</p>
-<h3 id="透明的文件"><a href="#透明的文件" class="headerlink" title="透明的文件"></a>透明的文件</h3><p>考点是ASCII转义, 也就是\033, 不过劣质终端Windows Terminal搭配WSL也显示不出颜色就是了…</p>
-<h3 id="旅行照片"><a href="#旅行照片" class="headerlink" title="旅行照片"></a>旅行照片</h3><p>最大的特征在于海边的肯德基, 故搜索”肯德基 海滩”, 发现是新澳海底世界店, 根据百度地图街景与穷举(或者画图)即可得出全部答案。</p>
-<h3 id="大砍刀"><a href="#大砍刀" class="headerlink" title="大砍刀"></a>大砍刀</h3><p>并夕夕红包已入账!</p>
-<p>劣质代码如下:</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Net;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title">dakandao</span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] args</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">string</span> acturl = <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="built_in">int</span> i=<span class="number">0</span>; i&lt;<span class="number">256</span>; i++)&#123;</span><br><span class="line">            <span class="built_in">string</span> ip = i+<span class="string">&quot;.0.0.1&quot;</span>;</span><br><span class="line">            post(acturl, ip);</span><br><span class="line">            Console.WriteLine(i);</span><br><span class="line">            Thread.Sleep(<span class="number">1000</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">post</span>(<span class="params"><span class="built_in">string</span> url, <span class="built_in">string</span> ipaddr</span>)</span>&#123;</span><br><span class="line">        WebClient wc = <span class="keyword">new</span> WebClient();</span><br><span class="line">        wc.Headers.Add(<span class="string">&quot;Content-Type&quot;</span>, <span class="string">&quot;application/x-www-form-urlencoded&quot;</span>);</span><br><span class="line">        wc.Headers.Add(<span class="string">&quot;X-Forwarded-For&quot;</span>, ipaddr);</span><br><span class="line">        <span class="built_in">string</span> poststr = <span class="string">&quot;ip=&quot;</span>+ipaddr;</span><br><span class="line">        <span class="built_in">byte</span>[] postdata = Encoding.ASCII.GetBytes(poststr);</span><br><span class="line">        wc.UploadData(url, <span class="string">&quot;POST&quot;</span>, postdata);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="Amnesia-轻度失忆"><a href="#Amnesia-轻度失忆" class="headerlink" title="Amnesia 轻度失忆"></a>Amnesia 轻度失忆</h3><p>直接写<code>printf(&quot;Hello, world!&quot;);</code>发现不能输出, 遂搜索.data与.rodata，发现不能使用字符串, 故使用char。</p>
-<p>代码如下:</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> a[<span class="number">13</span>];</span><br><span class="line">    a[<span class="number">0</span>] = <span class="string">&#x27;H&#x27;</span>;</span><br><span class="line">    a[<span class="number">1</span>] = <span class="string">&#x27;e&#x27;</span>;</span><br><span class="line">    a[<span class="number">2</span>] = <span class="string">&#x27;l&#x27;</span>;</span><br><span class="line">    a[<span class="number">3</span>] = <span class="string">&#x27;l&#x27;</span>;</span><br><span class="line">    a[<span class="number">4</span>] = <span class="string">&#x27;o&#x27;</span>;</span><br><span class="line">    a[<span class="number">5</span>] = <span class="string">&#x27;,&#x27;</span>;</span><br><span class="line">    a[<span class="number">6</span>] = <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">    a[<span class="number">7</span>] = <span class="string">&#x27;w&#x27;</span>;</span><br><span class="line">    a[<span class="number">8</span>] = <span class="string">&#x27;o&#x27;</span>;</span><br><span class="line">    a[<span class="number">9</span>] = <span class="string">&#x27;r&#x27;</span>;</span><br><span class="line">    a[<span class="number">10</span>] = <span class="string">&#x27;l&#x27;</span>;</span><br><span class="line">    a[<span class="number">11</span>] = <span class="string">&#x27;d&#x27;</span>;</span><br><span class="line">    a[<span class="number">12</span>] = <span class="string">&#x27;!&#x27;</span>;</span><br><span class="line">    <span class="built_in">printf</span>(a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="图之上的信息"><a href="#图之上的信息" class="headerlink" title="图之上的信息"></a>图之上的信息</h3><p>这道题想了半天没想出来, 后来发现GraphQL有一个introspection, 照抄, 如下:</p>
-<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;__type(<span class="name">name:</span> <span class="string">&quot;GUser&quot;</span>)&#123;</span><br><span class="line">name</span><br><span class="line">fields(<span class="name">includeDeprecated:</span> <span class="literal">true</span>)&#123;</span><br><span class="line">name&#125;&#125;&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="阵列恢复带师-RAID-5"><a href="#阵列恢复带师-RAID-5" class="headerlink" title="阵列恢复带师 RAID 5"></a>阵列恢复带师 RAID 5</h3><p>用商业软件R-studio直接算出来排序, 数据导出, 直接run一遍.py, 出结果。</p>
-
-    </div>
-
-    
-    
-    
-
-      <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/Daily/" rel="tag"># Daily</a>
-          </div>
-
         
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2021/05/maydayfin.html" rel="prev" title="五一假期的总结">
-      <i class="fa fa-chevron-left"></i> 五一假期的总结
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2022/03/onlineclass-thoughts.html" rel="next" title="Dingtalk大学生在校网课不会梦到PDF毕业证">
-      Dingtalk大学生在校网课不会梦到PDF毕业证 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
   
-  
-  
-
-
-
-          </div>
-          
-    <div class="comments" id="valine-comments"></div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
   </div>
 
   <aside class="sidebar">
-    <div class="sidebar-inner">
 
-      <ul class="sidebar-nav motion-element">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
         </li>
@@ -328,25 +118,25 @@
         </li>
       </ul>
 
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x01-%E5%BA%8F%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">0x01 序言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x02-%E9%A2%98%E8%A7%A3"><span class="nav-number">2.</span> <span class="nav-text">0x02 题解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AD%BE%E5%88%B0"><span class="nav-number">2.1.</span> <span class="nav-text">签到</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6"><span class="nav-number">2.2.</span> <span class="nav-text">十六进制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%BD%E5%AF%BB%E8%87%AA%E7%94%B1%E7%9A%84%E7%94%B5%E6%B3%A2-%E6%9C%AC%E9%A2%98%E6%9C%89%E4%B8%80%E8%A1%80"><span class="nav-number">2.3.</span> <span class="nav-text">追寻自由的电波(本题有一血)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8C%AB%E5%92%AA%E9%97%AE%E7%AD%94"><span class="nav-number">2.4.</span> <span class="nav-text">猫咪问答</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%96%E7%93%9C"><span class="nav-number">2.5.</span> <span class="nav-text">卖瓜</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%8F%E6%98%8E%E7%9A%84%E6%96%87%E4%BB%B6"><span class="nav-number">2.6.</span> <span class="nav-text">透明的文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%85%E8%A1%8C%E7%85%A7%E7%89%87"><span class="nav-number">2.7.</span> <span class="nav-text">旅行照片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%A7%E7%A0%8D%E5%88%80"><span class="nav-number">2.8.</span> <span class="nav-text">大砍刀</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Amnesia-%E8%BD%BB%E5%BA%A6%E5%A4%B1%E5%BF%86"><span class="nav-number">2.9.</span> <span class="nav-text">Amnesia 轻度失忆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E4%B9%8B%E4%B8%8A%E7%9A%84%E4%BF%A1%E6%81%AF"><span class="nav-number">2.10.</span> <span class="nav-text">图之上的信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%98%B5%E5%88%97%E6%81%A2%E5%A4%8D%E5%B8%A6%E5%B8%88-RAID-5"><span class="nav-number">2.11.</span> <span class="nav-text">阵列恢复带师 RAID 5</span></a></li></ol></li></ol></div>
-      </div>
-      <!--/noindex-->
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x01-%E5%BA%8F%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">0x01 序言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x02-%E9%A2%98%E8%A7%A3"><span class="nav-number">2.</span> <span class="nav-text">0x02 题解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AD%BE%E5%88%B0"><span class="nav-number">2.1.</span> <span class="nav-text">签到</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6"><span class="nav-number">2.2.</span> <span class="nav-text">十六进制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%BD%E5%AF%BB%E8%87%AA%E7%94%B1%E7%9A%84%E7%94%B5%E6%B3%A2(%E6%9C%AC%E9%A2%98%E6%9C%89%E4%B8%80%E8%A1%80)"><span class="nav-number">2.3.</span> <span class="nav-text">追寻自由的电波(本题有一血)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8C%AB%E5%92%AA%E9%97%AE%E7%AD%94"><span class="nav-number">2.4.</span> <span class="nav-text">猫咪问答</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%96%E7%93%9C"><span class="nav-number">2.5.</span> <span class="nav-text">卖瓜</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%8F%E6%98%8E%E7%9A%84%E6%96%87%E4%BB%B6"><span class="nav-number">2.6.</span> <span class="nav-text">透明的文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%85%E8%A1%8C%E7%85%A7%E7%89%87"><span class="nav-number">2.7.</span> <span class="nav-text">旅行照片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%A7%E7%A0%8D%E5%88%80"><span class="nav-number">2.8.</span> <span class="nav-text">大砍刀</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#amnesia-%E8%BD%BB%E5%BA%A6%E5%A4%B1%E5%BF%86"><span class="nav-number">2.9.</span> <span class="nav-text">Amnesia 轻度失忆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E4%B9%8B%E4%B8%8A%E7%9A%84%E4%BF%A1%E6%81%AF"><span class="nav-number">2.10.</span> <span class="nav-text">图之上的信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%98%B5%E5%88%97%E6%81%A2%E5%A4%8D%E5%B8%A6%E5%B8%88-raid-5"><span class="nav-number">2.11.</span> <span class="nav-text">阵列恢复带师 RAID 5</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
 
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="HaomingHSU"
-      src="/images/avatar.jpeg">
+      src="/images/akari.png">
   <p class="site-author-name" itemprop="name">HaomingHSU</p>
   <div class="site-description" itemprop="description"></div>
 </div>
-<div class="site-state-wrap motion-element">
+<div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">6</span>
+        <a href="/archives/">
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -356,7 +146,7 @@
       </div>
   </nav>
 </div>
-  <div class="links-of-author motion-element">
+  <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
         <a href="https://github.com/HaomingXU" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;HaomingXU" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
       </span>
@@ -364,30 +154,171 @@
         <a href="https://steamcommunity.com/id/haoming_xu" title="Steam → https:&#x2F;&#x2F;steamcommunity.com&#x2F;id&#x2F;haoming_xu" rel="noopener" target="_blank"><i class="fab fa-steam fa-fw"></i>Steam</a>
       </span>
   </div>
-  <div class="cc-license motion-element" itemprop="license">
-    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
   </div>
 
 
 
+        </div>
       </div>
-
     </div>
   </aside>
-  <div id="sidebar-dimmer"></div>
+  <div class="sidebar-dimmer"></div>
 
 
-      </div>
-    </main>
+    </header>
 
-    <footer class="footer">
-      <div class="footer-inner">
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://haoming.moe/2021/10/hg2021.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/akari.png">
+      <meta itemprop="name" content="HaomingHSU">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Haoming's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="参USTC第八届信息安全大赛(Hackergame 2021)记录 | Haoming's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          参USTC第八届信息安全大赛(Hackergame 2021)记录
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-10-30 13:15:22" itemprop="dateCreated datePublished" datetime="2021-10-30T13:15:22+08:00">2021-10-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2021-11-30 19:46:44" itemprop="dateModified" datetime="2021-11-30T19:46:44+08:00">2021-11-30</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="0x01-%E5%BA%8F%E8%A8%80" tabindex="-1">0x01 序言</h2>
+<p>嗯，简单点说，在过去的一周，参与了USTC HG2021，并获得了总排181/2677, 最高1/134, T3一血的成绩。本页内容在于简要记录解题方法，等。</p>
+<img src="/2021/10/hg2021/rank0.png" class="" title="最高排名时截图">
+<span id="more"></span>
+<h2 id="0x02-%E9%A2%98%E8%A7%A3" tabindex="-1">0x02 题解</h2>
+<h3 id="%E7%AD%BE%E5%88%B0" tabindex="-1">签到</h3>
+<p>没什么好说的, 发现使用GET, 获取Unix时间戳, 直接Google即可。</p>
+<h3 id="%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6" tabindex="-1">十六进制</h3>
+<p>使用OCR把16进制数字识别出来后转成ASCII, 即可得出。</p>
+<h3 id="%E8%BF%BD%E5%AF%BB%E8%87%AA%E7%94%B1%E7%9A%84%E7%94%B5%E6%B3%A2(%E6%9C%AC%E9%A2%98%E6%9C%89%E4%B8%80%E8%A1%80)" tabindex="-1">追寻自由的电波(本题有一血)</h3>
+<p>打开Premiere, 更改速度/持续时间, 放一遍即可。字母用的是NATO音标, 这是个知识点。</p>
+<img src="/2021/10/hg2021/fb.png" class="" title="一血留念|窝法乙烷">
+<h3 id="%E7%8C%AB%E5%92%AA%E9%97%AE%E7%AD%94" tabindex="-1">猫咪问答</h3>
+<p>基本上直接搜索相关内容即可。</p>
+<p>话说, 那个/dev/null让我懵了好一会...这就是整活吗?</p>
+<h3 id="%E5%8D%96%E7%93%9C" tabindex="-1">卖瓜</h3>
+<p>多输入几个大数字, 发现在9中输入会溢出, 以此为突破口。</p>
+<h3 id="%E9%80%8F%E6%98%8E%E7%9A%84%E6%96%87%E4%BB%B6" tabindex="-1">透明的文件</h3>
+<p>考点是ASCII转义, 也就是\033, 不过劣质终端Windows Terminal搭配WSL也显示不出颜色就是了...</p>
+<h3 id="%E6%97%85%E8%A1%8C%E7%85%A7%E7%89%87" tabindex="-1">旅行照片</h3>
+<p>最大的特征在于海边的肯德基, 故搜索&quot;肯德基 海滩&quot;, 发现是新澳海底世界店, 根据百度地图街景与穷举(或者画图)即可得出全部答案。</p>
+<h3 id="%E5%A4%A7%E7%A0%8D%E5%88%80" tabindex="-1">大砍刀</h3>
+<p>并夕夕红包已入账!</p>
+<p>劣质代码如下:</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Net;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title">dakandao</span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] args</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">string</span> acturl = <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="built_in">int</span> i=<span class="number">0</span>; i&lt;<span class="number">256</span>; i++)&#123;</span><br><span class="line">            <span class="built_in">string</span> ip = i+<span class="string">&quot;.0.0.1&quot;</span>;</span><br><span class="line">            post(acturl, ip);</span><br><span class="line">            Console.WriteLine(i);</span><br><span class="line">            Thread.Sleep(<span class="number">1000</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">post</span>(<span class="params"><span class="built_in">string</span> url, <span class="built_in">string</span> ipaddr</span>)</span>&#123;</span><br><span class="line">        WebClient wc = <span class="keyword">new</span> WebClient();</span><br><span class="line">        wc.Headers.Add(<span class="string">&quot;Content-Type&quot;</span>, <span class="string">&quot;application/x-www-form-urlencoded&quot;</span>);</span><br><span class="line">        wc.Headers.Add(<span class="string">&quot;X-Forwarded-For&quot;</span>, ipaddr);</span><br><span class="line">        <span class="built_in">string</span> poststr = <span class="string">&quot;ip=&quot;</span>+ipaddr;</span><br><span class="line">        <span class="built_in">byte</span>[] postdata = Encoding.ASCII.GetBytes(poststr);</span><br><span class="line">        wc.UploadData(url, <span class="string">&quot;POST&quot;</span>, postdata);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="amnesia-%E8%BD%BB%E5%BA%A6%E5%A4%B1%E5%BF%86" tabindex="-1">Amnesia 轻度失忆</h3>
+<p>直接写<code>printf(&quot;Hello, world!&quot;);</code>发现不能输出, 遂搜索.data与.rodata，发现不能使用字符串, 故使用char。</p>
+<p>代码如下:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> a[<span class="number">13</span>];</span><br><span class="line">    a[<span class="number">0</span>] = <span class="string">&#x27;H&#x27;</span>;</span><br><span class="line">    a[<span class="number">1</span>] = <span class="string">&#x27;e&#x27;</span>;</span><br><span class="line">    a[<span class="number">2</span>] = <span class="string">&#x27;l&#x27;</span>;</span><br><span class="line">    a[<span class="number">3</span>] = <span class="string">&#x27;l&#x27;</span>;</span><br><span class="line">    a[<span class="number">4</span>] = <span class="string">&#x27;o&#x27;</span>;</span><br><span class="line">    a[<span class="number">5</span>] = <span class="string">&#x27;,&#x27;</span>;</span><br><span class="line">    a[<span class="number">6</span>] = <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">    a[<span class="number">7</span>] = <span class="string">&#x27;w&#x27;</span>;</span><br><span class="line">    a[<span class="number">8</span>] = <span class="string">&#x27;o&#x27;</span>;</span><br><span class="line">    a[<span class="number">9</span>] = <span class="string">&#x27;r&#x27;</span>;</span><br><span class="line">    a[<span class="number">10</span>] = <span class="string">&#x27;l&#x27;</span>;</span><br><span class="line">    a[<span class="number">11</span>] = <span class="string">&#x27;d&#x27;</span>;</span><br><span class="line">    a[<span class="number">12</span>] = <span class="string">&#x27;!&#x27;</span>;</span><br><span class="line">    <span class="built_in">printf</span>(a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="%E5%9B%BE%E4%B9%8B%E4%B8%8A%E7%9A%84%E4%BF%A1%E6%81%AF" tabindex="-1">图之上的信息</h3>
+<p>这道题想了半天没想出来, 后来发现GraphQL有一个introspection, 照抄, 如下:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="title function_">__type</span>(<span class="params">name: <span class="string">&quot;GUser&quot;</span></span>)&#123;</span><br><span class="line">name</span><br><span class="line"><span class="title function_">fields</span>(<span class="params">includeDeprecated: <span class="literal">true</span></span>)&#123;</span><br><span class="line">name&#125;&#125;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="%E9%98%B5%E5%88%97%E6%81%A2%E5%A4%8D%E5%B8%A6%E5%B8%88-raid-5" tabindex="-1">阵列恢复带师 RAID 5</h3>
+<p>用商业软件R-studio直接算出来排序, 数据导出, <a target="_blank" rel="noopener" href="http://xn--run-s18dj30hmhy7c1b.py">直接run一遍.py</a>, 出结果。</p>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Daily/" rel="tag"># Daily</a>
+          </div>
+
         
 
-        
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/05/maydayfin.html" rel="prev" title="五一假期的总结">
+                  <i class="fa fa-chevron-left"></i> 五一假期的总结
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/03/onlineclass-thoughts.html" rel="next" title="Dingtalk大学生在校网课不会梦到PDF毕业证">
+                  Dingtalk大学生在校网课不会梦到PDF毕业证 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
 
 <div class="copyright">
-  
   &copy; 
   <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
@@ -395,153 +326,27 @@
   </span>
   <span class="author" itemprop="copyrightHolder">HaomingHSU</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/pjax/pjax.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-  <script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '#page-configurations',
-    '.content-wrap',
-    '.post-toc-wrap',
-    '.languages',
-    '#pjax'
-  ],
-  switches: {
-    '.post-toc-wrap': Pjax.switches.innerHTML
-  },
-  analytics: false,
-  cacheBust: false,
-  scrollTo : !CONFIG.bookmark.enable
-});
-
-window.addEventListener('pjax:success', () => {
-  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
-    var code = element.text || element.textContent || element.innerHTML || '';
-    var parent = element.parentNode;
-    parent.removeChild(element);
-    var script = document.createElement('script');
-    if (element.id) {
-      script.id = element.id;
-    }
-    if (element.className) {
-      script.className = element.className;
-    }
-    if (element.type) {
-      script.type = element.type;
-    }
-    if (element.src) {
-      script.src = element.src;
-      // Force synchronous loading of peripheral JS.
-      script.async = false;
-    }
-    if (element.dataset.pjax !== undefined) {
-      script.dataset.pjax = '';
-    }
-    if (code !== '') {
-      script.appendChild(document.createTextNode(code));
-    }
-    parent.appendChild(script);
-  });
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div id="pjax">
-  
-
-  
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : false,
-      notify     : false,
-      appId      : 'ek9DBjI51DSSttLDEjplkfHe-MdYXbMMI',
-      appKey     : 'D1hJ0X31fc7TTgmfKx8tfI6L',
-      placeholder: "Just go go",
-      avatar     : 'mm',
-      meta       : guest,
-      pageSize   : '10' || 10,
-      visitor    : false,
-      lang       : 'zh-CN' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : false,
-      serverURLs : ''
-    });
-  }, window.Valine);
-});
-</script>
 
     </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
 </body>
 </html>
